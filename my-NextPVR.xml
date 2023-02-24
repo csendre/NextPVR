@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<Container version="2">
+  <Name>NextPVR</Name>
+  <Repository>nextpvr/nextpvr_amd64:stable</Repository>
+  <Registry>https://hub.docker.com/r/nextpvr/nextpvr_amd64</Registry>
+  <Network>host</Network>
+  <MyIP />
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support />
+  <Project />
+  <Overview>NextPVR TV recording and video player software.</Overview>
+  <Category>MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:8866]/index.html</WebUI>
+  <TemplateURL />
+  <Icon>https://d36jcksde1wxzq.cloudfront.net/54e48877dab8df8f92cd.png</Icon>
+  <ExtraParams />
+  <PostArgs />
+  <CPUset />
+  <DateInstalled>1564992483</DateInstalled>
+  <DonateText />
+  <DonateLink />
+  <Description>NextPVR TV recording and video player software.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish />
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Recordings/</HostDir>
+      <ContainerDir>/recordings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/NextPVR/Buffer</HostDir>
+      <ContainerDir>/buffer</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/NextPVR/Config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment />
+  <Labels />
+  <Config Name="Recordings" Target="/recordings" Default="" Mode="rw" Description="Recordings Folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Recordings/</Config>
+  <Config Name="Buffer" Target="/buffer" Default="" Mode="rw" Description="Live TV Folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/NextPVR/Buffer</Config>
+  <Config Name="Configuration" Target="/config" Default="" Mode="rw" Description="Configuration Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/NextPVR/Config/</Config>
+</Container>
